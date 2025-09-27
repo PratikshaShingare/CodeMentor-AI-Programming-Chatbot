@@ -1,0 +1,64 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": ["hi", "hello", "hey", "good morning", "good afternoon", "good evening", "hi there", "hello there"],
+      "responses": ["Hello! 👋 I'm CodeMentor AI. How can I help you with programming today?", "Hi there! 😊 What programming topic would you like to explore?", "Hey! Ready to dive into some coding? What can I help you with?"]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["bye", "goodbye", "see you", "see ya", "exit", "quit"],
+      "responses": ["Goodbye! 👋 Feel free to come back if you have more programming questions!", "See you later! Happy coding! 😄", "Bye! Don't hesitate to return if you need more help!"]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["thank you", "thanks", "thank you very much", "appreciate it"],
+      "responses": ["You're welcome! 😊 Happy to help with your programming journey!", "Anytime! 👍 Let me know if you have more questions!", "Glad I could help! 💻 Keep coding!"]
+    },
+    {
+      "tag": "python_function",
+      "patterns": ["how to create function in python", "python function syntax", "define function python", "python def", "function in python"],
+      "responses": ["In Python, you define a function using the `def` keyword:\\n\\n```python\\ndef function_name(parameters):\\n    # function body\\n    return value\\n```\\n\\nExample:\\n```python\\ndef greet(name):\\n    return f\"Hello, {name}!\"\\n\\nprint(greet(\"Alice\"))  # Output: Hello, Alice!\\n```"]
+    },
+    {
+      "tag": "javascript_closure",
+      "patterns": ["what is closure in javascript", "explain js closures", "javascript closure example", "closure in js"],
+      "responses": ["A closure is a function that has access to its outer function's scope even after the outer function has returned:\\n\\n```javascript\\nfunction outer() {\\n    let count = 0;\\n    return function inner() {\\n        count++;\\n        return count;\\n    };\\n}\\n\\nconst counter = outer();\\nconsole.log(counter()); // 1\\nconsole.log(counter()); // 2\\n```\\n\\nClosures are useful for data encapsulation and creating private variables."]
+    },
+    {
+      "tag": "react_hooks",
+      "patterns": ["what is react hooks", "react hooks explained", "useState hook", "useEffect hook", "react hooks example"],
+      "responses": ["React Hooks are functions that let you use state and other React features in functional components:\\n\\n```jsx\\nimport React, { useState, useEffect } from 'react';\\n\\nfunction Example() {\\n    const [count, setCount] = useState(0);\\n    \\n    useEffect(() => {\\n        document.title = `Count: ${count}`;\\n    }, [count]);\\n    \\n    return (\\n        <div>\\n            <p>You clicked {count} times</p>\\n            <button onClick={() => setCount(count + 1)}>\\n                Click me\\n            </button>\\n        </div>\\n    );\\n}\\n```"]
+    },
+    {
+      "tag": "python_list",
+      "patterns": ["python list", "how to create list in python", "list methods python", "python list comprehension"],
+      "responses": ["In Python, lists are ordered, mutable collections:\\n\\n```python\\n# Creating a list\\nmy_list = [1, 2, 3, 'hello']\\n\\n# List methods\\nmy_list.append(4)        # Add item\\nmy_list.remove('hello')  # Remove item\\nmy_list.sort()          # Sort list\\n\\n# List comprehension\\nsquares = [x**2 for x in range(10)]\\n```"]
+    },
+    {
+      "tag": "javascript_async",
+      "patterns": ["javascript async await", "async function javascript", "promises javascript", "what is async await"],
+      "responses": ["Async/await makes asynchronous code easier to write and read:\\n\\n```javascript\\n// Using async/await\\nasync function fetchData() {\\n    try {\\n        const response = await fetch('api/data');\\n        const data = await response.json();\\n        return data;\\n    } catch (error) {\\n        console.error('Error:', error);\\n    }\\n}\\n\\n// Equivalent to promises\\nfunction fetchData() {\\n    return fetch('api/data')\\n        .then(response => response.json())\\n        .catch(error => console.error('Error:', error));\\n}\\n```"]
+    },
+    {
+      "tag": "git_branches",
+      "patterns": ["git branches", "how to create branch in git", "git checkout branch", "merge branches git"],
+      "responses": ["Git branches allow you to work on different features simultaneously:\\n\\n```bash\\n# Create and switch to new branch\\ngit checkout -b feature-branch\\n\\n# Switch between branches\\ngit checkout main\\ngit checkout feature-branch\\n\\n# Merge branches\\ngit checkout main\\ngit merge feature-branch\\n\\n# Delete branch\\ngit branch -d feature-branch\\n```"]
+    },
+    {
+      "tag": "html_css",
+      "patterns": ["what is html", "what is css", "html and css", "web development basics"],
+      "responses": ["HTML structures content, while CSS styles it:\\n\\n```html\\n<!-- HTML -->\\n<div class=\"container\">\\n    <h1>Hello World</h1>\\n    <p>This is a paragraph</p>\\n</div>\\n\\n<!-- CSS -->\\n<style>\\n.container {\\n    max-width: 1200px;\\n    margin: 0 auto;\\n    padding: 20px;\\n}\\n\\nh1 {\\n    color: blue;\\n    font-size: 2rem;\\n}\\n</style>\\n```"]
+    },
+    {
+      "tag": "java_oop",
+      "patterns": ["java oop", "object oriented programming java", "java classes and objects", "inheritance java"],
+      "responses": ["Java is an object-oriented programming language:\\n\\n```java\\n// Class definition\\npublic class Car {\\n    private String brand;\\n    \\n    // Constructor\\n    public Car(String brand) {\\n        this.brand = brand;\\n    }\\n    \\n    // Method\\n    public void start() {\\n        System.out.println(brand + \" car started!\");\\n    }\\n}\\n\\n// Using the class\\nCar myCar = new Car(\"Toyota\");\\nmyCar.start();\\n```"]
+    },
+    {
+      "tag": "sql_basics",
+      "patterns": ["sql queries", "what is sql", "database queries", "select statement sql"],
+      "responses": ["SQL is used to manage and query databases:\\n\\n```sql\\n-- Basic SELECT statement\\nSELECT * FROM users WHERE age > 18;\\n\\n-- JOIN tables\\nSELECT users.name, orders.amount\\nFROM users\\nJOIN orders ON users.id = orders.user_id;\\n\\n-- INSERT data\\nINSERT INTO users (name, email) VALUES ('John', 'john@email.com');\\n\\n-- UPDATE data\\nUPDATE users SET email = 'new@email.com' WHERE id = 1;\\n```"]
+    }
+  ]
+}
